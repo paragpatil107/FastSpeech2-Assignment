@@ -186,6 +186,14 @@ validation statistics, loss graphs, variance-adaptor graphs, deviations).
 
 ## Notes
 
+- The heavy artifacts — raw dataset audio (`raw_data/`), extracted features and per-utterance
+  alignment JSONs (`preprocessed_data/`), step logs (`output/log/`) and model checkpoints
+  (`output/ckpt/`, `English/checkpoints/`, `Telugu/checkpoints/`) — are excluded from the
+  repository via `.gitignore` (several GB, regenerable). Any clone reproduces them with
+  `English\preprocess.py` / `Telugu\preprocess.py` followed by the training commands above.
+  The merged `Results/` (audios, variance plots, loss curves) and `Report/` documents in the
+  repository are the actual outputs of the runs.
+
 - `English\preprocess.py` etc. are thin wrappers; the real implementations live at the
   repository root so that the two languages share one verified code path.
 - `LICENSE` (MIT) and `FastSpeech2_original_README.md` are kept from the base repository with full attribution.
