@@ -1,0 +1,27 @@
+path:
+  ckpt_path: output/ckpt/en
+  log_path: output/log/en
+  result_path: output/result/en
+optimizer:
+  batch_size: 4
+  mel_batch_budget: 12000
+  amp: true
+  betas:
+  - 0.9
+  - 0.98
+  eps: 1.0e-09
+  weight_decay: 0.0
+  grad_clip_thresh: 1.0
+  grad_acc_step: 1
+  warm_up_step: 1500
+  anneal_steps:
+  - 300000
+  - 400000
+  - 500000
+  anneal_rate: 0.3
+step:
+  total_step: 10000
+  log_step: 50
+  synth_step: 100000
+  val_step: 500
+  save_step: 1000
