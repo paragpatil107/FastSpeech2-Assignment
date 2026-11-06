@@ -344,7 +344,7 @@ def build_report():
     for item in [
         "Telugu utterance telugu_000927 excluded: source text/audio mismatch makes forced alignment infeasible.",
         "4 utterances removed from the English corpus: unvoiced pitch (see skip report).",
-        "The pretrained universal HiFi-GAN vocoder is spectro-audio-agent-neutral; speaker-identity pitch range may recall base-vocoder colour, not the target speaker voice.",
+        "The pretrained universal HiFi-GAN vocoder is speaker-agnostic; speaker identity is dominated by the trained acoustic model, with vocoder colouring shared across speakers.",
         "English token alignment score (~0.70) is lower than the Telugu (~0.95) because grapheme-level romanization for spellings is a harder CTC objective than the actual pronunciation appears; boundary noise is <2 frames per token on average.",
     ]:
         pdf.bullet(item)
